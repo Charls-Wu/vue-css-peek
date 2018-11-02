@@ -1,0 +1,58 @@
+{
+  "name": "vue-css-peek",
+  "displayName": "Vue CSS Peek",
+  "description": "为单页面的vue文件提供css转定义的支持",
+  "icon": "css_peek_icon.png",
+  "license": "MIT",
+  "keywords": [
+    "peek",
+    "definition",
+    "css",
+    "vue"
+  ],
+  "version": "1.0.0",
+  "publisher": "CharlesOrg",
+  "engines": {
+    "vscode": "^1.15.0"
+  },
+  "bugs": {
+    "url": "https://github.com/pranaygp/vscode-css-peek/issues"
+  },
+  "homepage": "https://github.com/Charls-Wu/vue-css-peek/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Charls-Wu/vue-css-peek"
+  },
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/client/src/extension",
+  "contributes": {},
+  "scripts": {
+    "vscode:prepublish": "cp ../README.md . && tsc -p ./",
+    "compile": "tsc -p ./",
+    "watch": "tsc -w -p ./",
+    "update-vscode": "node ./node_modules/vscode/bin/install",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "lint": "eslint src/ --ext .ts",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "env CODE_TESTS_PATH=\"$(pwd)/out/client/test\" CODE_TESTS_WORKSPACE=\"$(pwd)/test/test_files\" nyc node ./node_modules/vscode/bin/test",
+    "posttest": "nyc report --reporter=json && codecov -f coverage/*.json"
+  },
+  "dependencies": {
+    "vscode": "^1.1.5",
+    "vscode-languageclient": "^3.4.2"
+  },
+  "devDependencies": {
+    "codecov": "^3.0.0",
+    "eslint": "^4.12.1",
+    "eslint-plugin-import": "^2.8.0",
+    "mocha": "^4.0.1",
+    "nyc": "^11.3.0",
+    "typescript": "^2.6.2",
+    "typescript-eslint-parser": "^9.0.1",
+    "vscode-css-languageservice": "^3.0.1",
+    "vscode-html-languageservice": "^2.0.12",
+    "vscode-languageserver": "^3.5.0"
+  }
+}

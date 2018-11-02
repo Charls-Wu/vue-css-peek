@@ -1,0 +1,10 @@
+out
+node_modules
+.DS_Store
+typings/globals/
+
+.nyc_output/
+coverage/
+
+.vscode-test
+npm-debug.log
