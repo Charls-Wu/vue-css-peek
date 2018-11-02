@@ -11,12 +11,12 @@
     "vue"
   ],
   "version": "1.0.0",
-  "publisher": "CharlesOrg",
+  "publisher": "CharlesWu",
   "engines": {
     "vscode": "^1.15.0"
   },
   "bugs": {
-    "url": "https://github.com/pranaygp/vscode-css-peek/issues"
+    "url": "https://github.com/Charls-Wu/vue-css-peek/issues"
   },
   "homepage": "https://github.com/Charls-Wu/vue-css-peek/blob/master/README.md",
   "repository": {
